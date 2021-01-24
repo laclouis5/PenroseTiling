@@ -12,7 +12,7 @@ struct MainView: View {
     @State private var revolutions: Double
     @State private var subdivisions = 0
     
-    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.colorScheme) private var colorScheme
     
     init(revolutions: Int = 6) {
         precondition(revolutions > 0, "Number of revolutions must be greater than 0")
@@ -23,12 +23,13 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Spacer()
                 PenroseView(tiles: $tiles)
+                captionView
                 Spacer()
                 sliderView
-                buttonView
-                Text("Total triangles: \(tiles.count)")
-                    .font(.headline)
+                buttonsView
+                infoView
             }
             .padding()
             .background(backgroundColor.edgesIgnoringSafeArea(.all))
@@ -36,9 +37,19 @@ struct MainView: View {
         }
     }
     
+    private var captionView: some View {
+        Label("Tap a tile to subdivide it", systemImage: "info.circle")
+            .font(.caption)
+    }
+    
+    private var infoView: some View {
+        Text("Total triangles: \(tiles.count)")
+            .font(.headline)
+    }
+    
     private var sliderView: some View {
         VStack(alignment: .leading) {
-            Text("Number of Revolutions: ")
+            Text("Number of Revolutions:")
                 .font(.headline)
             HStack {
                 Slider(value: $revolutions, in: 4...16, step: 2.0) { _ in
@@ -51,7 +62,7 @@ struct MainView: View {
         }
     }
     
-    private var buttonView: some View {
+    private var buttonsView: some View {
         HStack {
             Button(action: {
                 tiles = tiles.subdivide()
@@ -104,7 +115,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             MainView()
-            MainView().environment(\.colorScheme, .dark)
         }
     }
 }

@@ -28,9 +28,9 @@ struct PenroseView: View {
     private func color(for tile: Tile) -> Color {
         switch tile.type {
         case .kite:
-            return .blue
-        case .dart:
             return .red
+        case .dart:
+            return .orange
         }
     }
 }

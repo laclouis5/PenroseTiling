@@ -1,0 +1,802 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B960DF9125BDAC1A004C996C /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DF9025BDAC1A004C996C /* Tests_iOS.swift */; };
+		B960DF9C25BDAC1A004C996C /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DF9B25BDAC1A004C996C /* Tests_macOS.swift */; };
+		B960DF9E25BDAC1A004C996C /* PenroseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DF7525BDAC17004C996C /* PenroseApp.swift */; };
+		B960DF9F25BDAC1A004C996C /* PenroseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DF7525BDAC17004C996C /* PenroseApp.swift */; };
+		B960DFA025BDAC1A004C996C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DF7625BDAC17004C996C /* MainView.swift */; };
+		B960DFA125BDAC1A004C996C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DF7625BDAC17004C996C /* MainView.swift */; };
+		B960DFA225BDAC1A004C996C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B960DF7725BDAC19004C996C /* Assets.xcassets */; };
+		B960DFA325BDAC1A004C996C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B960DF7725BDAC19004C996C /* Assets.xcassets */; };
+		B960DFB725BDAC35004C996C /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DFB625BDAC35004C996C /* Tile.swift */; };
+		B960DFB825BDAC35004C996C /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DFB625BDAC35004C996C /* Tile.swift */; };
+		B960DFC425BDACD6004C996C /* ComplexModule in Frameworks */ = {isa = PBXBuildFile; productRef = B960DFC325BDACD6004C996C /* ComplexModule */; };
+		B960DFC625BDACD6004C996C /* RealModule in Frameworks */ = {isa = PBXBuildFile; productRef = B960DFC525BDACD6004C996C /* RealModule */; };
+		B960DFC825BDACD6004C996C /* Numerics in Frameworks */ = {isa = PBXBuildFile; productRef = B960DFC725BDACD6004C996C /* Numerics */; };
+		B960DFD725BDAD44004C996C /* ComplexModule in Frameworks */ = {isa = PBXBuildFile; productRef = B960DFD625BDAD44004C996C /* ComplexModule */; };
+		B960DFD925BDAD44004C996C /* Numerics in Frameworks */ = {isa = PBXBuildFile; productRef = B960DFD825BDAD44004C996C /* Numerics */; };
+		B960DFDB25BDAD44004C996C /* RealModule in Frameworks */ = {isa = PBXBuildFile; productRef = B960DFDA25BDAD44004C996C /* RealModule */; };
+		B960DFED25BDAFC4004C996C /* Numerics+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DFEC25BDAFC4004C996C /* Numerics+Extensions.swift */; };
+		B960DFEE25BDAFC4004C996C /* Numerics+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DFEC25BDAFC4004C996C /* Numerics+Extensions.swift */; };
+		B960DFF425BDB0E0004C996C /* PenroseTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DFF325BDB0E0004C996C /* PenroseTriangle.swift */; };
+		B960DFF525BDB0E0004C996C /* PenroseTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DFF325BDB0E0004C996C /* PenroseTriangle.swift */; };
+		B9D5670B25BDF6E4003D3E9C /* PenroseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5670A25BDF6E4003D3E9C /* PenroseView.swift */; };
+		B9D5670C25BDF6E4003D3E9C /* PenroseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D5670A25BDF6E4003D3E9C /* PenroseView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B960DF8D25BDAC1A004C996C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B960DF7025BDAC16004C996C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B960DF7B25BDAC19004C996C;
+			remoteInfo = "Penrose (iOS)";
+		};
+		B960DF9825BDAC1A004C996C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B960DF7025BDAC16004C996C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B960DF8325BDAC1A004C996C;
+			remoteInfo = "Penrose (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B960DF7525BDAC17004C996C /* PenroseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenroseApp.swift; sourceTree = "<group>"; };
+		B960DF7625BDAC17004C996C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B960DF7725BDAC19004C996C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B960DF7C25BDAC19004C996C /* Penrose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Penrose.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B960DF7F25BDAC19004C996C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B960DF8425BDAC1A004C996C /* Penrose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Penrose.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B960DF8625BDAC1A004C996C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B960DF8725BDAC1A004C996C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		B960DF8C25BDAC1A004C996C /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B960DF9025BDAC1A004C996C /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		B960DF9225BDAC1A004C996C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B960DF9725BDAC1A004C996C /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B960DF9B25BDAC1A004C996C /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		B960DF9D25BDAC1A004C996C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B960DFB625BDAC35004C996C /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		B960DFEC25BDAFC4004C996C /* Numerics+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numerics+Extensions.swift"; sourceTree = "<group>"; };
+		B960DFF325BDB0E0004C996C /* PenroseTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenroseTriangle.swift; sourceTree = "<group>"; };
+		B9D5670A25BDF6E4003D3E9C /* PenroseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenroseView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B960DF7925BDAC19004C996C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B960DFC625BDACD6004C996C /* RealModule in Frameworks */,
+				B960DFC825BDACD6004C996C /* Numerics in Frameworks */,
+				B960DFC425BDACD6004C996C /* ComplexModule in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B960DF8125BDAC1A004C996C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B960DFD925BDAD44004C996C /* Numerics in Frameworks */,
+				B960DFD725BDAD44004C996C /* ComplexModule in Frameworks */,
+				B960DFDB25BDAD44004C996C /* RealModule in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B960DF8925BDAC1A004C996C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B960DF9425BDAC1A004C996C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B960DF6F25BDAC16004C996C = {
+			isa = PBXGroup;
+			children = (
+				B960DF7425BDAC17004C996C /* Shared */,
+				B960DF7E25BDAC19004C996C /* iOS */,
+				B960DF8525BDAC1A004C996C /* macOS */,
+				B960DF8F25BDAC1A004C996C /* Tests iOS */,
+				B960DF9A25BDAC1A004C996C /* Tests macOS */,
+				B960DF7D25BDAC19004C996C /* Products */,
+				B960DFD525BDAD44004C996C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B960DF7425BDAC17004C996C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B960DF7525BDAC17004C996C /* PenroseApp.swift */,
+				B960DF7625BDAC17004C996C /* MainView.swift */,
+				B9D5670A25BDF6E4003D3E9C /* PenroseView.swift */,
+				B960DFF325BDB0E0004C996C /* PenroseTriangle.swift */,
+				B960DFB625BDAC35004C996C /* Tile.swift */,
+				B960DFEC25BDAFC4004C996C /* Numerics+Extensions.swift */,
+				B960DF7725BDAC19004C996C /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B960DF7D25BDAC19004C996C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B960DF7C25BDAC19004C996C /* Penrose.app */,
+				B960DF8425BDAC1A004C996C /* Penrose.app */,
+				B960DF8C25BDAC1A004C996C /* Tests iOS.xctest */,
+				B960DF9725BDAC1A004C996C /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B960DF7E25BDAC19004C996C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B960DF7F25BDAC19004C996C /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		B960DF8525BDAC1A004C996C /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				B960DF8625BDAC1A004C996C /* Info.plist */,
+				B960DF8725BDAC1A004C996C /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		B960DF8F25BDAC1A004C996C /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B960DF9025BDAC1A004C996C /* Tests_iOS.swift */,
+				B960DF9225BDAC1A004C996C /* Info.plist */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		B960DF9A25BDAC1A004C996C /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				B960DF9B25BDAC1A004C996C /* Tests_macOS.swift */,
+				B960DF9D25BDAC1A004C996C /* Info.plist */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		B960DFD525BDAD44004C996C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B960DF7B25BDAC19004C996C /* Penrose (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B960DFA625BDAC1A004C996C /* Build configuration list for PBXNativeTarget "Penrose (iOS)" */;
+			buildPhases = (
+				B960DF7825BDAC19004C996C /* Sources */,
+				B960DF7925BDAC19004C996C /* Frameworks */,
+				B960DF7A25BDAC19004C996C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Penrose (iOS)";
+			packageProductDependencies = (
+				B960DFC325BDACD6004C996C /* ComplexModule */,
+				B960DFC525BDACD6004C996C /* RealModule */,
+				B960DFC725BDACD6004C996C /* Numerics */,
+			);
+			productName = "Penrose (iOS)";
+			productReference = B960DF7C25BDAC19004C996C /* Penrose.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B960DF8325BDAC1A004C996C /* Penrose (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B960DFA925BDAC1A004C996C /* Build configuration list for PBXNativeTarget "Penrose (macOS)" */;
+			buildPhases = (
+				B960DF8025BDAC1A004C996C /* Sources */,
+				B960DF8125BDAC1A004C996C /* Frameworks */,
+				B960DF8225BDAC1A004C996C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Penrose (macOS)";
+			packageProductDependencies = (
+				B960DFD625BDAD44004C996C /* ComplexModule */,
+				B960DFD825BDAD44004C996C /* Numerics */,
+				B960DFDA25BDAD44004C996C /* RealModule */,
+			);
+			productName = "Penrose (macOS)";
+			productReference = B960DF8425BDAC1A004C996C /* Penrose.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B960DF8B25BDAC1A004C996C /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B960DFAC25BDAC1A004C996C /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				B960DF8825BDAC1A004C996C /* Sources */,
+				B960DF8925BDAC1A004C996C /* Frameworks */,
+				B960DF8A25BDAC1A004C996C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B960DF8E25BDAC1A004C996C /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = B960DF8C25BDAC1A004C996C /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B960DF9625BDAC1A004C996C /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B960DFAF25BDAC1A004C996C /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				B960DF9325BDAC1A004C996C /* Sources */,
+				B960DF9425BDAC1A004C996C /* Frameworks */,
+				B960DF9525BDAC1A004C996C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B960DF9925BDAC1A004C996C /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = B960DF9725BDAC1A004C996C /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B960DF7025BDAC16004C996C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					B960DF7B25BDAC19004C996C = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					B960DF8325BDAC1A004C996C = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					B960DF8B25BDAC1A004C996C = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = B960DF7B25BDAC19004C996C;
+					};
+					B960DF9625BDAC1A004C996C = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = B960DF8325BDAC1A004C996C;
+					};
+				};
+			};
+			buildConfigurationList = B960DF7325BDAC16004C996C /* Build configuration list for PBXProject "Penrose" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B960DF6F25BDAC16004C996C;
+			packageReferences = (
+				B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */,
+			);
+			productRefGroup = B960DF7D25BDAC19004C996C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B960DF7B25BDAC19004C996C /* Penrose (iOS) */,
+				B960DF8325BDAC1A004C996C /* Penrose (macOS) */,
+				B960DF8B25BDAC1A004C996C /* Tests iOS */,
+				B960DF9625BDAC1A004C996C /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B960DF7A25BDAC19004C996C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B960DFA225BDAC1A004C996C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B960DF8225BDAC1A004C996C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B960DFA325BDAC1A004C996C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B960DF8A25BDAC1A004C996C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B960DF9525BDAC1A004C996C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B960DF7825BDAC19004C996C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B960DFF425BDB0E0004C996C /* PenroseTriangle.swift in Sources */,
+				B960DFB725BDAC35004C996C /* Tile.swift in Sources */,
+				B960DFED25BDAFC4004C996C /* Numerics+Extensions.swift in Sources */,
+				B9D5670B25BDF6E4003D3E9C /* PenroseView.swift in Sources */,
+				B960DFA025BDAC1A004C996C /* MainView.swift in Sources */,
+				B960DF9E25BDAC1A004C996C /* PenroseApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B960DF8025BDAC1A004C996C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B960DFF525BDB0E0004C996C /* PenroseTriangle.swift in Sources */,
+				B960DFB825BDAC35004C996C /* Tile.swift in Sources */,
+				B960DFEE25BDAFC4004C996C /* Numerics+Extensions.swift in Sources */,
+				B9D5670C25BDF6E4003D3E9C /* PenroseView.swift in Sources */,
+				B960DFA125BDAC1A004C996C /* MainView.swift in Sources */,
+				B960DF9F25BDAC1A004C996C /* PenroseApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B960DF8825BDAC1A004C996C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B960DF9125BDAC1A004C996C /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B960DF9325BDAC1A004C996C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B960DF9C25BDAC1A004C996C /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B960DF8E25BDAC1A004C996C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B960DF7B25BDAC19004C996C /* Penrose (iOS) */;
+			targetProxy = B960DF8D25BDAC1A004C996C /* PBXContainerItemProxy */;
+		};
+		B960DF9925BDAC1A004C996C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B960DF8325BDAC1A004C996C /* Penrose (macOS) */;
+			targetProxy = B960DF9825BDAC1A004C996C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B960DFA425BDAC1A004C996C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B960DFA525BDAC1A004C996C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B960DFA725BDAC1A004C996C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BR37CM74X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = louislac.Penrose;
+				PRODUCT_NAME = Penrose;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B960DFA825BDAC1A004C996C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BR37CM74X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = louislac.Penrose;
+				PRODUCT_NAME = Penrose;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B960DFAA25BDAC1A004C996C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9BR37CM74X;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = louislac.Penrose;
+				PRODUCT_NAME = Penrose;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B960DFAB25BDAC1A004C996C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9BR37CM74X;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = louislac.Penrose;
+				PRODUCT_NAME = Penrose;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B960DFAD25BDAC1A004C996C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BR37CM74X;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "louislac.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Penrose (iOS)";
+			};
+			name = Debug;
+		};
+		B960DFAE25BDAC1A004C996C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BR37CM74X;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "louislac.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Penrose (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B960DFB025BDAC1A004C996C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9BR37CM74X;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "louislac.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Penrose (macOS)";
+			};
+			name = Debug;
+		};
+		B960DFB125BDAC1A004C996C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9BR37CM74X;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "louislac.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Penrose (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B960DF7325BDAC16004C996C /* Build configuration list for PBXProject "Penrose" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B960DFA425BDAC1A004C996C /* Debug */,
+				B960DFA525BDAC1A004C996C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B960DFA625BDAC1A004C996C /* Build configuration list for PBXNativeTarget "Penrose (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B960DFA725BDAC1A004C996C /* Debug */,
+				B960DFA825BDAC1A004C996C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B960DFA925BDAC1A004C996C /* Build configuration list for PBXNativeTarget "Penrose (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B960DFAA25BDAC1A004C996C /* Debug */,
+				B960DFAB25BDAC1A004C996C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B960DFAC25BDAC1A004C996C /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B960DFAD25BDAC1A004C996C /* Debug */,
+				B960DFAE25BDAC1A004C996C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B960DFAF25BDAC1A004C996C /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B960DFB025BDAC1A004C996C /* Debug */,
+				B960DFB125BDAC1A004C996C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-numerics";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B960DFC325BDACD6004C996C /* ComplexModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = ComplexModule;
+		};
+		B960DFC525BDACD6004C996C /* RealModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = RealModule;
+		};
+		B960DFC725BDACD6004C996C /* Numerics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = Numerics;
+		};
+		B960DFD625BDAD44004C996C /* ComplexModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = ComplexModule;
+		};
+		B960DFD825BDAD44004C996C /* Numerics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = Numerics;
+		};
+		B960DFDA25BDAD44004C996C /* RealModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = RealModule;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B960DF7025BDAC16004C996C /* Project object */;
+}

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,12 +17,6 @@
 		B960DFA325BDAC1A004C996C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B960DF7725BDAC19004C996C /* Assets.xcassets */; };
 		B960DFB725BDAC35004C996C /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DFB625BDAC35004C996C /* Tile.swift */; };
 		B960DFB825BDAC35004C996C /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DFB625BDAC35004C996C /* Tile.swift */; };
-		B960DFC425BDACD6004C996C /* ComplexModule in Frameworks */ = {isa = PBXBuildFile; productRef = B960DFC325BDACD6004C996C /* ComplexModule */; };
-		B960DFC625BDACD6004C996C /* RealModule in Frameworks */ = {isa = PBXBuildFile; productRef = B960DFC525BDACD6004C996C /* RealModule */; };
-		B960DFC825BDACD6004C996C /* Numerics in Frameworks */ = {isa = PBXBuildFile; productRef = B960DFC725BDACD6004C996C /* Numerics */; };
-		B960DFD725BDAD44004C996C /* ComplexModule in Frameworks */ = {isa = PBXBuildFile; productRef = B960DFD625BDAD44004C996C /* ComplexModule */; };
-		B960DFD925BDAD44004C996C /* Numerics in Frameworks */ = {isa = PBXBuildFile; productRef = B960DFD825BDAD44004C996C /* Numerics */; };
-		B960DFDB25BDAD44004C996C /* RealModule in Frameworks */ = {isa = PBXBuildFile; productRef = B960DFDA25BDAD44004C996C /* RealModule */; };
 		B960DFED25BDAFC4004C996C /* Numerics+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DFEC25BDAFC4004C996C /* Numerics+Extensions.swift */; };
 		B960DFEE25BDAFC4004C996C /* Numerics+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DFEC25BDAFC4004C996C /* Numerics+Extensions.swift */; };
 		B960DFF425BDB0E0004C996C /* PenroseTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960DFF325BDB0E0004C996C /* PenroseTriangle.swift */; };
@@ -74,9 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B960DFC625BDACD6004C996C /* RealModule in Frameworks */,
-				B960DFC825BDACD6004C996C /* Numerics in Frameworks */,
-				B960DFC425BDACD6004C996C /* ComplexModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,9 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B960DFD925BDAD44004C996C /* Numerics in Frameworks */,
-				B960DFD725BDAD44004C996C /* ComplexModule in Frameworks */,
-				B960DFDB25BDAD44004C996C /* RealModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,9 +192,6 @@
 			);
 			name = "Penrose (iOS)";
 			packageProductDependencies = (
-				B960DFC325BDACD6004C996C /* ComplexModule */,
-				B960DFC525BDACD6004C996C /* RealModule */,
-				B960DFC725BDACD6004C996C /* Numerics */,
 			);
 			productName = "Penrose (iOS)";
 			productReference = B960DF7C25BDAC19004C996C /* Penrose.app */;
@@ -226,9 +211,6 @@
 			);
 			name = "Penrose (macOS)";
 			packageProductDependencies = (
-				B960DFD625BDAD44004C996C /* ComplexModule */,
-				B960DFD825BDAD44004C996C /* Numerics */,
-				B960DFDA25BDAD44004C996C /* RealModule */,
 			);
 			productName = "Penrose (macOS)";
 			productReference = B960DF8425BDAC1A004C996C /* Penrose.app */;
@@ -305,7 +287,6 @@
 			);
 			mainGroup = B960DF6F25BDAC16004C996C;
 			packageReferences = (
-				B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */,
 			);
 			productRefGroup = B960DF7D25BDAC19004C996C /* Products */;
 			projectDirPath = "";
@@ -753,50 +734,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-numerics";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.8;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B960DFC325BDACD6004C996C /* ComplexModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */;
-			productName = ComplexModule;
-		};
-		B960DFC525BDACD6004C996C /* RealModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */;
-			productName = RealModule;
-		};
-		B960DFC725BDACD6004C996C /* Numerics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */;
-			productName = Numerics;
-		};
-		B960DFD625BDAD44004C996C /* ComplexModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */;
-			productName = ComplexModule;
-		};
-		B960DFD825BDAD44004C996C /* Numerics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */;
-			productName = Numerics;
-		};
-		B960DFDA25BDAD44004C996C /* RealModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B960DFC225BDACD6004C996C /* XCRemoteSwiftPackageReference "swift-numerics" */;
-			productName = RealModule;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B960DF7025BDAC16004C996C /* Project object */;
 }

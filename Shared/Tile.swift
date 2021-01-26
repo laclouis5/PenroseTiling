@@ -6,15 +6,14 @@
 //
 
 import Foundation
-import Numerics
 
-enum TileType: Hashable {
+enum TileType: Equatable, Hashable {
     case kite  // The small one
     case dart  // The big one
 }
 
-struct Tile: Hashable, Equatable {
-    let a, b, c: Complex<Double>
+struct Tile: Equatable, Hashable {
+    let a, b, c: SIMD2<Double>
     let type: TileType
 }
 
@@ -40,14 +39,14 @@ extension Tile {
 }
 
 extension Array where Element == Tile {
-    func subdivide() -> Self {
-        reduce(into: []) { $0 += $1.subdivide() }
+    func subdivide() -> [Tile] {
+        flatMap { $0.subdivide() }
     }
 }
 
 
 extension Tile {
-    static func wheel(revolutions: Int = 6) -> [Self] {
+    static func wheel(revolutions: Int = 10) -> [Tile] {
         precondition(revolutions > 0, "Number of revolutions must be greater than 0")
         
         return (0..<revolutions).map { i in

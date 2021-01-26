@@ -6,16 +6,12 @@
 //
 
 import Foundation
-import Numerics
+import SwiftUI
 
 extension Double {
     static var goldenRatio: Double { (1.0 + sqrt(5.0)) / 2.0 }
 }
 
-extension Complex where RealType == Double {
-    static var goldenRatio: Self { Complex(.goldenRatio) }
-}
-
-func polarToRect(_ r: Double, _ theta: Double) -> Complex<Double> {
-    Complex(r) * Complex(cos(theta), sin(theta))
+func polarToRect(_ r: Double, _ theta: Double) -> SIMD2<Double> {
+    return SIMD2<Double>(r * cos(theta), r*sin(theta))
 }

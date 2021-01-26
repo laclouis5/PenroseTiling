@@ -14,7 +14,7 @@ struct MainView: View {
     
     @Environment(\.colorScheme) private var colorScheme
     
-    init(revolutions: Int = 8) {
+    init(revolutions: Int = 10) {
         precondition(revolutions > 0, "Number of revolutions must be greater than 0")
         self._tiles = State(initialValue: Tile.wheel(revolutions: revolutions))
         self._revolutions = State(initialValue: Double(revolutions))

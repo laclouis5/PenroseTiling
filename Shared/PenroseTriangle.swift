@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Numerics
 
 struct PenroseTriangle: Shape {
     let tile: Tile
@@ -16,20 +15,18 @@ struct PenroseTriangle: Shape {
             let cx = rect.width / 2.0
             let cy = rect.height / 2.0
             
-            let x1 = cx.addingProduct(CGFloat(tile.a.real), cx)
-            let y1 = cy.addingProduct(CGFloat(tile.a.imaginary), cy)
+            let x1 = cx.addingProduct(CGFloat(tile.a.x), cx)
+            let y1 = cy.addingProduct(CGFloat(tile.a.y), cy)
             
-            let x2 = cx.addingProduct(CGFloat(tile.b.real), cx)
-            let y2 = cy.addingProduct(CGFloat(tile.b.imaginary), cy)
+            let x2 = cx.addingProduct(CGFloat(tile.b.x), cx)
+            let y2 = cy.addingProduct(CGFloat(tile.b.y), cy)
 
-            let x3 = cx.addingProduct(CGFloat(tile.c.real), cx)
-            let y3 = cy.addingProduct(CGFloat(tile.c.imaginary), cy)
+            let x3 = cx.addingProduct(CGFloat(tile.c.x), cx)
+            let y3 = cy.addingProduct(CGFloat(tile.c.y), cy)
             
             path.move(to: CGPoint(x: x3, y: y3))
             path.addLine(to: CGPoint(x: x1, y: y1))
             path.addLine(to: CGPoint(x: x2, y: y2))
-            
-//            path.closeSubpath()
         }
     }
 }

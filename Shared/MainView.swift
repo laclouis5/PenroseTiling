@@ -8,17 +8,10 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var tiles: [Tile]
-    @State private var revolutions: Double
+    @State private var tiles: [Tile] = .wheel
     @State private var subdivisions = 0
     
     @Environment(\.colorScheme) private var colorScheme
-    
-    init(revolutions: Int = 10) {
-        precondition(revolutions > 0, "Number of revolutions must be greater than 0")
-        self._tiles = State(initialValue: Tile.wheel(revolutions: revolutions))
-        self._revolutions = State(initialValue: Double(revolutions))
-    }
     
     var body: some View {
         NavigationView {
@@ -27,7 +20,6 @@ struct MainView: View {
                 PenroseView(tiles: $tiles)
                 captionView
                 Spacer()
-                sliderView
                 buttonsView
                 infoView
             }
@@ -47,21 +39,6 @@ struct MainView: View {
             .font(.headline)
     }
     
-    private var sliderView: some View {
-        VStack(alignment: .leading) {
-            Text("Number of Revolutions:")
-                .font(.headline)
-            HStack {
-                Slider(value: $revolutions, in: 4...16, step: 2.0) { _ in
-                    tiles = Tile.wheel(revolutions: Int(revolutions))
-                }
-                .accentColor(primaryColor)
-                Text("\(Int(revolutions))")
-                    .font(.headline)
-            }
-        }
-    }
-    
     private var buttonsView: some View {
         HStack {
             Button(action: {
@@ -76,7 +53,7 @@ struct MainView: View {
             }
             Spacer()
             Button(action: {
-                tiles = Tile.wheel(revolutions: Int(revolutions))
+                tiles = .wheel
                 subdivisions = 0
             }) {
                 Text("Reset")

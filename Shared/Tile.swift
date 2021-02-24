@@ -45,13 +45,11 @@ extension Array where Element == Tile {
 }
 
 
-extension Tile {
-    static func wheel(revolutions: Int = 10) -> [Tile] {
-        precondition(revolutions > 0, "Number of revolutions must be greater than 0")
-        
-        return (0..<revolutions).map { i in
-            var b = polarToRect(1.0, (2.0 * Double(i) - 1.0) * .pi / Double(revolutions))
-            var c = polarToRect(1.0, (2.0 * Double(i) + 1.0) * .pi / Double(revolutions))
+extension Array where Element == Tile {
+    static var wheel: [Tile] {
+        (0..<10).map { i in
+            var b = polarToRect(1.0, (2.0 * Double(i) - 1.0) * .pi / 10.0)
+            var c = polarToRect(1.0, (2.0 * Double(i) + 1.0) * .pi / 10.0)
 
             if i % 2 == 0 {
                 swap(&b, &c)

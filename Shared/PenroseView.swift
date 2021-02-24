@@ -37,6 +37,6 @@ struct PenroseView: View {
 
 struct PenroseView_Previews: PreviewProvider {
     static var previews: some View {
-        PenroseView(tiles: .constant(Tile.wheel(revolutions: 10)))
+        PenroseView(tiles: .constant(.wheel))
     }
 }

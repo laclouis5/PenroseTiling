@@ -32,7 +32,7 @@ struct PenroseTriangle: Shape {
 }
 
 struct PenroseTriangle_Previews: PreviewProvider {
-    static let tile: Tile = Tile.wheel()[0]
+    static let tile: Tile = [Tile].wheel[0]
     
     static var previews: some View {
         Group {

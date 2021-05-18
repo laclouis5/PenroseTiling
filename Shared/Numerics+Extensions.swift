@@ -13,5 +13,5 @@ extension Double {
 }
 
 func polarToRect(_ r: Double, _ theta: Double) -> SIMD2<Double> {
-    return SIMD2<Double>(r * cos(theta), r*sin(theta))
+    return SIMD2<Double>(r * cos(theta), r * sin(theta))
 }
